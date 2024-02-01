@@ -19,99 +19,97 @@ class _HowToEarnState extends State<HowToEarn> {
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 13),
       decoration: BoxDecoration(
         color: const Color.fromARGB(66, 158, 158, 158),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(12),
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'How to earn'.toUpperCase(),
-                  style: GoogleFonts.inter(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: const Color.fromRGBO(183, 138, 233, 1),
-                  ),
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'How to earn'.toUpperCase(),
+                style: GoogleFonts.inter(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Color.fromARGB(197, 182, 138, 233),
                 ),
-                const Image(
-                  image: AssetImage('assets/images/Mask.png'),
-                  fit: BoxFit.fill,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const StepContainer(
-              helpingText: 'Tips Share to any groups to get rewards faster',
-              reward: 'You',
-              stepNumber: 1,
-              mainText: 'Share Link to freinds',
-            ),
-            const StepContainer(
-              helpingText:
-                  'one inviter can only be associated with a mobile phone number',
-              reward: 'Invitee',
-              stepNumber: 2,
-              mainText: 'Fill mobile phone number, download PalmPay',
-            ),
-            const StepContainer(
-              helpingText: '',
-              reward: 'invitees',
-              stepNumber: 3,
-              mainText: 'SignUp for PalmPay, get benefits for new users',
-            ),
-            const StepContainer(
-              helpingText: '',
-              reward: 'You',
-              stepNumber: 4,
-              mainText: 'Get great rewards!',
-            ),
-            Text(
-              'Rules'.toUpperCase(),
-              style: GoogleFonts.inter(
-                color: Colors.grey,
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Divider(
-              height: 1,
+              const Image(
+                image: AssetImage('assets/images/Mask.png'),
+                fit: BoxFit.fill,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const StepContainer(
+            helpingText: 'Tips Share to any groups to get rewards faster',
+            reward: 'You',
+            stepNumber: 1,
+            mainText: 'Share Link to freinds',
+          ),
+          const StepContainer(
+            helpingText:
+                'one inviter can only be associated with a mobile phone number',
+            reward: 'Invitee',
+            stepNumber: 2,
+            mainText: 'Fill mobile phone number, download PalmPay',
+          ),
+          const StepContainer(
+            helpingText: '',
+            reward: 'invitees',
+            stepNumber: 3,
+            mainText: 'SignUp for PalmPay, get benefits for new users',
+          ),
+          const StepContainer(
+            helpingText: '',
+            reward: 'You',
+            stepNumber: 4,
+            mainText: 'Get great rewards!',
+          ),
+          Text(
+            'Rules'.toUpperCase(),
+            style: GoogleFonts.inter(
               color: Colors.grey,
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            const RulesContainer(
-              ruleNumber: 1,
-              text:
-                  "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const RulesContainer(
-              ruleNumber: 2,
-              text:
-                  "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const RulesContainer(
-              ruleNumber: 3,
-              text:
-                  "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Divider(
+            height: 1,
+            color: Colors.grey,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const RulesContainer(
+            ruleNumber: 1,
+            text:
+                "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const RulesContainer(
+            ruleNumber: 2,
+            text:
+                "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const RulesContainer(
+            ruleNumber: 3,
+            text:
+                "Each round of activity is 7 days.When the activity expires, if the user's amount has reached the withdrawl threshold and has not been withdrawn, the rerward amount will be automatically withdrawn;",
+          ),
+        ],
       ),
     );
   }
@@ -139,7 +137,8 @@ class _StepContainerState extends State<StepContainer> {
     final Size size = MediaQuery.of(context).size;
     // ignore: sized_box_for_whitespace
     return Container(
-      height: 120,
+      margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
+      height: 150,
       width: size.width,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,21 +146,21 @@ class _StepContainerState extends State<StepContainer> {
         children: [
           Container(
             padding: const EdgeInsets.all(10),
-            height: 100,
-            width: 100,
+            height: size.height,
+            width: 110,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(12),
             ),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   'Step ${widget.stepNumber}'.toUpperCase(),
                   style: GoogleFonts.inter(
                     color: Colors.grey,
-                    fontSize: 15,
+                    fontSize: 13,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -181,7 +180,7 @@ class _StepContainerState extends State<StepContainer> {
                   widget.reward.toUpperCase(),
                   style: GoogleFonts.inter(
                     color: Colors.grey,
-                    fontSize: 15,
+                    fontSize: 13,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -192,9 +191,9 @@ class _StepContainerState extends State<StepContainer> {
             width: 5,
           ),
           Container(
-            // width: size.width,
-            width: 180,
-            height: 100,
+            width: size.width >= 400 ? 220 : 150,
+            // width: 250,
+            height: size.height,
             padding: const EdgeInsets.all(8),
             child: SingleChildScrollView(
               child: Column(
@@ -205,7 +204,7 @@ class _StepContainerState extends State<StepContainer> {
                     widget.mainText,
                     style: GoogleFonts.inter(
                       color: const Color.fromRGBO(183, 138, 233, 1),
-                      fontSize: 17,
+                      fontSize: 13,
                       fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.start,
@@ -214,7 +213,7 @@ class _StepContainerState extends State<StepContainer> {
                     widget.helpingText,
                     style: GoogleFonts.inter(
                       color: Colors.grey,
-                      fontSize: 14,
+                      fontSize: 12,
                       fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.start,
@@ -246,7 +245,7 @@ class _RulesContainerState extends State<RulesContainer> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width,
       // height: 100,
       child: Column(
@@ -259,7 +258,7 @@ class _RulesContainerState extends State<RulesContainer> {
                 style: GoogleFonts.inter(
                   color: Colors.grey,
                   fontWeight: FontWeight.w500,
-                  fontSize: 17,
+                  fontSize: 13,
                 ),
                 textAlign: TextAlign.start,
               ),
@@ -268,7 +267,7 @@ class _RulesContainerState extends State<RulesContainer> {
                 style: GoogleFonts.inter(
                   color: Colors.grey,
                   fontWeight: FontWeight.w500,
-                  fontSize: 17,
+                  fontSize: 13,
                 ),
               ),
               Flexible(
@@ -277,7 +276,7 @@ class _RulesContainerState extends State<RulesContainer> {
                   style: GoogleFonts.inter(
                     color: Colors.grey,
                     fontWeight: FontWeight.w500,
-                    fontSize: 17,
+                    fontSize: 13,
                   ),
                   textAlign: TextAlign.start,
                 ),

@@ -15,7 +15,7 @@ class _ShowIndicatorState extends State<ShowIndicator> {
       children: [
         Container(
           width: 350,
-          height: 17,
+          height: 20,
           decoration: BoxDecoration(
             color: const Color.fromARGB(118, 158, 158, 158),
             borderRadius: BorderRadius.circular(20),
@@ -25,7 +25,7 @@ class _ShowIndicatorState extends State<ShowIndicator> {
           left: 0,
           top: 0,
           child: Container(
-            height: 17,
+            height: 20,
             width: 80,
             decoration: BoxDecoration(
               color: Color.fromRGBO(125, 35, 224, 1),
@@ -34,15 +34,16 @@ class _ShowIndicatorState extends State<ShowIndicator> {
           ),
         ),
         Positioned(
-          left: 80,
+          left: 85,
           top: 0,
+          // bottom: 10,
           child: Column(
             children: [
               Text(
                 '500',
                 style: GoogleFonts.inter(
-                  color: Colors.grey,
-                  fontSize: 15,
+                  color: Color.fromARGB(103, 0, 0, 0),
+                  fontSize: 11,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -50,15 +51,15 @@ class _ShowIndicatorState extends State<ShowIndicator> {
           ),
         ),
         Positioned(
-          left: 150,
+          left: 160,
           top: 0,
           child: Column(
             children: [
               Text(
                 '1000',
                 style: GoogleFonts.inter(
-                  color: Colors.grey,
-                  fontSize: 15,
+                  color: Color.fromARGB(103, 0, 0, 0),
+                  fontSize: 11,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -74,8 +75,8 @@ class _ShowIndicatorState extends State<ShowIndicator> {
                 child: Text(
                   '2000',
                   style: GoogleFonts.inter(
-                    color: Colors.grey,
-                    fontSize: 15,
+                    color: Color.fromARGB(103, 0, 0, 0),
+                    fontSize: 11,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

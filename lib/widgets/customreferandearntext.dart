@@ -11,6 +11,7 @@ class CustomReferAndEarn extends StatefulWidget {
 class _CustomReferAndEarnState extends State<CustomReferAndEarn> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     // ignore: avoid_unnecessary_containers
     return Container(
       child: Column(
@@ -30,17 +31,21 @@ class _CustomReferAndEarnState extends State<CustomReferAndEarn> {
             child: Row(
               children: [
                 const Image(
-                  image: AssetImage('assets/images/oval.png'),
+                  image: AssetImage('assets/images/Oval.png'),
                   fit: BoxFit.fill,
                 ),
                 const SizedBox(
                   width: 3,
                 ),
                 Text(
-                  'xxxxxxxxxxxxxxxx got xxx(money) just now.',
+                  'xxxxxxxxx got xxx(money) just now.',
                   style: GoogleFonts.inter(
-                    color: const Color.fromARGB(255, 169, 105, 236),
-                    fontSize: 13,
+                    color: Color.fromARGB(169, 168, 105, 236),
+                    fontSize: size.width >= 400
+                        ? 15
+                        : size.width < 300
+                            ? 11
+                            : 13,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

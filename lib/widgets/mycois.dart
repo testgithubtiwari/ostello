@@ -30,6 +30,8 @@ class _MyCoinsState extends State<MyCoins> {
                 ),
               ),
               Container(
+                width: 170,
+                height: 50,
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(56, 215, 159, 1),
@@ -40,7 +42,7 @@ class _MyCoinsState extends State<MyCoins> {
                     'Withdraw',
                     style: GoogleFonts.inter(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -62,14 +64,14 @@ class _MyCoinsState extends State<MyCoins> {
                 'Invite 3 new users to get ',
                 style: GoogleFonts.inter(
                   color: Colors.grey,
-                  fontSize: 18,
+                  fontSize: 15,
                   fontWeight: FontWeight.w500,
                 ),
               ),
               Text(
                 'N500',
                 style: GoogleFonts.inter(
-                  color: const Color.fromARGB(120, 0, 0, 0),
+                  color: Color.fromARGB(136, 0, 0, 0),
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
